@@ -101,7 +101,7 @@ const submitForm = async (event) => {
 
   try {
     const webhookUrl =
-      'https://services.leadconnectorhq.com/hooks/PQ4V1Sd7jieDkPLx9CGN/webhook-trigger/9340b6c2-31ea-464a-8e88-c0b905a7ef50'
+      'https://services.leadconnectorhq.com/hooks/bTVDXHCYtnzhI1hdcsrA/webhook-trigger/f5a6a462-f26b-4672-ba7a-9e81b5a5ade9'
 
     const { gclid, wbraid, gbraid } = getClickIds()
     const serviceName = getServiceDisplayName(formData.value.serviceType)
@@ -165,15 +165,15 @@ const submitForm = async (event) => {
 
 const getServiceDisplayName = (serviceValue) => {
   const serviceMap = {
-    hibaelhárítás: 'Csontkovács kezelés (gerinc / ízületek)',
-    világítás: 'Manuálterápia (izom, fascia, mobilizáció)',
-    konnektor: 'Derék- és hátfájdalom kezelése',
-    felújítás: 'Nyak- és vállfeszülések kezelése',
-    korszerűsítés: 'Testtartási problémák kezelése',
-    erősáram: 'TMJ / állkapocs és sztomatognatikus rendszer',
-    gyengeáram: 'Zsigeri (viszcerális) oszteopátia',
-    ipari: 'Sport / aktív életmód melletti mozgásszervi panaszok',
-    egyéb: 'Egyéb panasz / konzultáció',
+    csontkovacs: 'Csontkovács kezelés (gerinc / ízületek)',
+    manualterapia: 'Manuálterápia (izom, fascia, mobilizáció)',
+    derek_hat: 'Derék- és hátfájdalom kezelése',
+    nyak_vall: 'Nyak- és vállfeszülések kezelése',
+    testtartas: 'Testtartási problémák kezelése',
+    tmj: 'TMJ / állkapocs és sztomatognatikus rendszer',
+    zsigeri: 'Zsigeri (viszcerális) oszteopátia',
+    sport: 'Sport / aktív életmód melletti mozgásszervi panaszok',
+    egyeb: 'Egyéb panasz / konzultáció',
   }
   return serviceMap[serviceValue] || serviceValue
 }
@@ -566,23 +566,23 @@ onBeforeUnmount(() => {
                   :disabled="isSubmitting"
                 >
                   <option value="">Válasszon szolgáltatást...</option>
-                  <option value="hibaelhárítás">
+                  <option value="csontkovacs">
                     Csontkovács kezelés (gerinc / ízületek)
                   </option>
-                  <option value="világítás">
+                  <option value="manualterapia">
                     Manuálterápia (izom, fascia, mobilizáció)
                   </option>
-                  <option value="konnektor">Derék- és hátfájdalom</option>
-                  <option value="felújítás">Nyak- és vállfeszülés</option>
-                  <option value="korszerűsítés">Testtartási problémák</option>
-                  <option value="erősáram">TMJ / állkapocs panaszok</option>
-                  <option value="gyengeáram">
+                  <option value="derek_hat">Derék- és hátfájdalom</option>
+                  <option value="nyak_vall">Nyak- és vállfeszülés</option>
+                  <option value="testtartas">Testtartási problémák</option>
+                  <option value="tmj">TMJ / állkapocs panaszok</option>
+                  <option value="zsigeri">
                     Zsigeri (viszcerális) oszteopátia
                   </option>
-                  <option value="ipari">
+                  <option value="sport">
                     Sport / aktív életmód melletti panasz
                   </option>
-                  <option value="egyéb">Egyéb / nem biztos benne</option>
+                  <option value="egyeb">Egyéb / nem biztos benne</option>
                 </select>
               </div>
 
@@ -606,7 +606,6 @@ onBeforeUnmount(() => {
                   <option value="sürgős">Sürgős (ma még szükséges)</option>
                   <option value="rövid">Rövid időn belül (1-2 nap)</option>
                   <option value="normál">Normál (1-2 hét)</option>
-                  <option value="tervezett">Tervezett felújítás</option>
                 </select>
               </div>
             </div>
