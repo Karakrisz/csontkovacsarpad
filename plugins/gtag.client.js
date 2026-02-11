@@ -3,7 +3,7 @@ export default defineNuxtPlugin(() => {
    
     const script = document.createElement('script')
     script.async = true
-    script.src = ''
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-648113111'
     document.head.appendChild(script)
 
     window.dataLayer = window.dataLayer || []
@@ -13,6 +13,6 @@ export default defineNuxtPlugin(() => {
     window.gtag = gtag
 
     gtag('js', new Date())
-    gtag('config', '')
+    gtag('config', 'AW-648113111')
   }
 })
